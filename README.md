@@ -17,7 +17,7 @@ Refer to our paper and this page...
 ## Anonymous Github
 https://anonymous.4open.science/r/4dc2b523-af99-4f70-a10f-d6c544d58c21/
 
-NG words:
+NG words (add affilliations, author names, and ...):
 
 Akinori F. Ebihara
 
