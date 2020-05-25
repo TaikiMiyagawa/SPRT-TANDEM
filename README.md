@@ -1,5 +1,5 @@
 # SPRT TANDEM
-___Please cite our paper and this page if you use the whole of a part of our code.___
+___Please cite our paper and this page if you use the whole or a part of our code.___
 ```
 Bibtex:
 
