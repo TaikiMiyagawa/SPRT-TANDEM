@@ -51,10 +51,11 @@ Bibtex:
   - TensorBoard logger class
 
 ## Nosaic MNIST Example
- ![](./NMNIST.png)
+(Cannot open the image in Anonymous Github)
+![](./NMNIST.png)
 
 ## Anonymous Github Spec
-https://xxx
+https://anonymous.4open.science/r/8e802b42-ec6f-4545-b34e-fb320cba4c4d/#home
 
 NG words (add affiliations, author names, and ...):
 
