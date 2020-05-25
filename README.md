@@ -1,18 +1,13 @@
 # SPRT-TANDEM-Project
-___Cite our paper and this page if you use the whole of a part of our code.___
+___Cite our paper and this page if you use the whole or a part of our code.___
 ```
 Bibtex:
 
 @article{XXX
   XXX
 }
-@misc{XXX,
-  author = {Akinori F. Ebihara and Taiki Miyagawa and Kazuyuki Sakurai and Hitoshi Imaoka},
-  title = {Github Repository: TaikiMiyagawa/SPRT-TANDEM},
-  howpublished = {\url{https://XXXgithub}},
-  month = {},
-  year = {2020},
-  note = {(Accessed on 05/12/2020)}
+@misc{XXX
+  XXX
 }
 ```
 
