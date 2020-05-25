@@ -1,5 +1,5 @@
-# SPRT-TANDEM-Project
-___Cite our paper and this page if you use the whole or a part of our code.___
+# SPRT TANDEM
+___Please cite our paper and this page if you use the whole of a part of our code.___
 ```
 Bibtex:
 
@@ -50,8 +50,11 @@ Bibtex:
 - `utils/util_tensorboard.py`
   - TensorBoard logger class
 
+## Nosaic MNIST Example
+ ![](./NMNIST.png)
+
 ## Anonymous Github Spec
-https://anonymous.4open.science/r/4dc2b523-af99-4f70-a10f-d6c544d58c21/
+https://xxx
 
 NG words (add affiliations, author names, and ...):
 
@@ -63,6 +66,8 @@ Akinori
 
 Ebihara
 
+t-miyagawa
+
 Taiki Miyagawa
 
 TaikiMiyagawa
@@ -70,8 +75,6 @@ TaikiMiyagawa
 Taiki
 
 Miyagawa
-
-t-miyagawa
 
 taiki
 
