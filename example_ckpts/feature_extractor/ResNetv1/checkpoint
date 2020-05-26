@@ -1,0 +1,8 @@
+model_checkpoint_path: "ckpt_step6400_mbac0.98195-17"
+all_model_checkpoint_paths: "ckpt_step5000_mbac0.96012-15"
+all_model_checkpoint_paths: "ckpt_step5800_mbac0.96594-16"
+all_model_checkpoint_paths: "ckpt_step6400_mbac0.98195-17"
+all_model_checkpoint_timestamps: 1585580505.8991666
+all_model_checkpoint_timestamps: 1585582679.2112627
+all_model_checkpoint_timestamps: 1585584317.7999957
+last_preserved_timestamp: 1585566770.7615051

@@ -1,4 +1,7 @@
-"""LSTM model definition compatible with TensorFlow's eager execution.
+""" LSTM model definition compatible with TensorFlow's eager execution.
+    References:
+        Hochreiter and Schmidhuber, 1997. "Long Short-Term Memory."
+        Gers and Schmidhuber, 2000. "Recurrent nets that time and count."
 """
 from __future__ import absolute_import
 from __future__ import division

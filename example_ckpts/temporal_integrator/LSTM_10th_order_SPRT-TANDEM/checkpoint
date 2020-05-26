@@ -1,0 +1,8 @@
+model_checkpoint_path: "ckpt_step3100_mbac0.97091-21"
+all_model_checkpoint_paths: "ckpt_step2050_mbac0.97083-19"
+all_model_checkpoint_paths: "ckpt_step2350_mbac0.97088-20"
+all_model_checkpoint_paths: "ckpt_step3100_mbac0.97091-21"
+all_model_checkpoint_timestamps: 1586167533.5354288
+all_model_checkpoint_timestamps: 1586168217.0000093
+all_model_checkpoint_timestamps: 1586169935.5272722
+last_preserved_timestamp: 1586162397.8599155

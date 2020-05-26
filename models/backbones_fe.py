@@ -1,5 +1,8 @@
 """ ResNet version 1 and 2 implementation with TF2.
-    Code modified from official TF1 code.
+    Code modified from the official TF1 code.
+    References: 
+        He et al., 2016. "Deep Residual Learning for Image Recognition."
+        He et al., 2016. "Identity Mappings in Deep Residual Networks."
 """
 from __future__ import absolute_import
 from __future__ import division

@@ -1,4 +1,12 @@
-# tf.__version__ = 2.0.0
+""" Make Nosaic MNIST in TFRecord format. 
+Make sure to make both training and test datasets (see line 26).
+To load the TFR, see, e.g., `read_tfrecords_nosaic_mnist` in ./datasets/data_prossessing.py.
+
+This script is the Step 1 in
+1. Generate Nosaic MNIST (`python make_nmnist.py`).
+2. Extract and save features in TFRecords format (save_featureTFR_nmnist.ipynb).
+3. Plot SAT curve (plot_SAT_curve.ipynb)
+"""
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
@@ -11,13 +19,13 @@ import tensorflow as tf
 import tensorflow_datasets as tfds
 
 ############## USER DEFINED #####################
-data_dir = "/data-directory/tensorflow_datasets" 
-    # to be downloaded to this directory
-train_or_test = "train" 
+data_dir = "./data-directory/tensorflow_datasets" 
+    # MNIST will be downloaded to this directory
+train_or_test = "train" #"test"
     # "train" (train dataset will be made) or "test" (test dataset will be made). 
-    # Make sure to execute this script twice. 
+    # Make sure to execute this script TWICE. 
     # One is to make the training dataset; the othrer is to make the test dataset.
-record_file = "/data-directory/nosaic_mnist/nosaic_mnist_{}.tfrecords".format(train_or_test)
+record_file = "./data-directory/nosaic_mnist_{}.tfrecords".format(train_or_test)
     # TFR name
 #################################################
 
@@ -75,7 +83,7 @@ labels_test = dsts["label"].numpy()  # (10000,), np.int64
 # train or test
 if train_or_test == "train":
     images_make = images_train
-    labels_make = images_train
+    labels_make = labels_train
 elif train_or_test == "test":
     images_make = images_test
     labels_make = labels_test
@@ -85,14 +93,13 @@ else:
 # Make training "OR" test data of nosaic MNIST
 ############################################################
 if os.path.exists(record_file):
-    raise ValueError("record_file exists.")
+    raise ValueError("record_file exists. Remove or rename it.")
     
 with tf.io.TFRecordWriter(record_file) as writer:
-#with tf.io.TFRecordWriter(record_file, options=tf.io.TFRecordOptions(compression_type=tf.compat.v1.io.TFRecordCompressionType.GZIP)) as writer: #####
     cnt = 1
     for image, label in zip(images_make, labels_make):
         # Verbose
-        if cnt % 100 == 0:
+        if cnt % 1000 == 0:
             print("Iteration {}/{}".format(cnt, len(images_make)))
         cnt += 1
 
@@ -135,42 +142,3 @@ with tf.io.TFRecordWriter(record_file) as writer:
         ########################################
         label = np.int64(label) 
         np_to_tfr_nosaic_mnist(x=video, y=label, writer=writer)
-
-        
-""" APPENDIX: Use this (works on jupyter notebook) to check the TFRecord generated."""    
-def read_tfr(record_file='/data-directory/nosaic_mnist/nosaic_mnist_test.tfrecords'):
-    # Read TFR
-    def _parse_image_function(example_proto):
-      return tf.io.parse_single_example(example_proto, {
-                'video': tf.io.FixedLenFeature([], tf.string),
-                'label': tf.io.FixedLenFeature([],tf.int64)
-                })
-
-    raw_image_dataset = tf.data.TFRecordDataset(record_file) 
-    parsed_image_dataset = raw_image_dataset.map(_parse_image_function)
-    parsed_image_dataset = parsed_image_dataset.shuffle(40000)
-    parsed_image_dataset = parsed_image_dataset.batch(128, drop_remainder=False)
-
-    tic = time.time()
-    for i, feats in enumerate(parsed_image_dataset):
-        video_batch = tf.io.decode_raw(feats['video'], tf.uint8)
-        video_batch = tf.cast(video_batch, tf.float32)
-        video_batch = tf.reshape(video_batch, (-1, 20, 28, 28, 1)) # (B, T, H, W, C)
-        label_batch = tf.cast(feats["label"], tf.int32) # (B, )
-    print(time.time() - tic)
-    
-    # Plot (works on jupyter notebook)
-    cnt = 0
-    for video, label in zip(video_batch, label_batch):
-        fig = plt.figure(figsize=(28, 28), facecolor="w")
-        for i, img in enumerate(video):
-            img = np.reshape(img, (28, 28))
-            ax = fig.add_subplot(20, 1, i+1)
-            ax.imshow(img, cmap="gray")
-            ax.set_axis_off()
-
-        plt.show() # rewrite around here if necessary
-        print(label.numpy())
-        cnt += 1
-        if cnt == 5:
-            break
