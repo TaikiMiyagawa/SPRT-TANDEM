@@ -86,7 +86,7 @@ Bibtex:
 }
 ```
 
-## Anonymous Github Spec
+## Anonymous Github
 https://anonymous.4open.science/r/8e802b42-ec6f-4545-b34e-fb320cba4c4d/#home
 
 
