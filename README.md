@@ -13,6 +13,10 @@ This repository contains the SPRT-TANDEM model proposed in "Deep Neural Networks
 2. Save bottleneck features of Nosaic MNIST (`save_featureTFR_nmnist.ipynb`): Modify user-defined parameters and run all the cells.
 3. Plot the speed-accuracy tradeoff (SAT) curve (`plot_SAT_curve.ipynb`): Modify user-defined parameters and run all the cells.
 
+(Cannot open the image in Anonymous Github)
+![](./SATC.png)
+![](./LLR_trajectory_example.png)
+
 ## Files and Directories
 - `train_fe_nmnist.py`
   - training script for feature extractor (ResNet) on Nosaic MNIST
