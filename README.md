@@ -14,19 +14,23 @@ This repository contains the SPRT-TANDEM model proposed in "Deep Neural Networks
 3. Plot the speed-accuracy tradeoff (SAT) curve (`plot_SAT_curve.ipynb`): Modify user-defined parameters and run all the cells.
 
 (Cannot open the images in Anonymous Github)
+
+__Result images__
+
 ![](./SATC.png)
 ![](./LLR_trajectory_example.png)
 
 ## Files and Directories
 - `train_fe_nmnist.py`
-  - training script for feature extractor (ResNet) on Nosaic MNIST
+  - __training script__ for feature extractor (ResNet) on Nosaic MNIST
   - Modiry `config_fe.yaml` as you see fit and `python train_fe_nmnist.py` in `/SPRT-TANDEM`.
 - `train_ti_nmnist.py`
-  - training script for temporal integrator (LSTM) on Nosaic MNIST
+  - __training script__ for temporal integrator (LSTM) on Nosaic MNIST
   - Modiry `config_ti.yaml` as you see fit and `python train_ti_nmnist.py` in `/SPRT-TANDEM`.
 
 - `demo_nmnist.ipynb`
   - Nosaic MNIST is like this. Have a look!
+  - See also the image below.
 
 - `make_nmnist.py`
   - for reproduction
@@ -35,10 +39,11 @@ This repository contains the SPRT-TANDEM model proposed in "Deep Neural Networks
   - for reproduction
   - extracts bottleneck features and save them to TFRecords
 - `plot_SAT_curve.ipynb`
-  - for reproduction
+  - for reproduction 
+  - for __evaluation__
   - draws the speed-accuracy tradeoff (SAT) curve and log-likelihood ratio trajectories of a model
 - `example_ckpts/`
-  - for reproduction and quick trial
+  - __Pre-trained models__ for reproduction and quick trial
   - Our trained models, namely, ResNet and two LSTMs, are here.
 - `data-directory/`
   - Nosaic MNIST will be saved here by default parameters of `make_nmnist.py`.
@@ -59,7 +64,7 @@ This repository contains the SPRT-TANDEM model proposed in "Deep Neural Networks
   - loss functions and gradient computation. 
   - ___LLLR is in `binary_llr_loss_func`.___
 - `models/optimizers.py`
-  - optimizer switching function
+  - functions to switch optimizers
 
 - `utils/misc.py`
   - miscellaneous minor functions
@@ -74,7 +79,12 @@ This repository contains the SPRT-TANDEM model proposed in "Deep Neural Networks
   - TensorBoard logger class
 
 ## Nosaic MNIST Example
-(Cannot open the image in Anonymous Github)
+(Cannot open the image in Anonymous Github) 
+
+Nosaic (Noise + mOSAIC) MNIST is suitable for early classification of time series. You can generate Nosaic MNIST running `make_nmnist.py`.
+
+__An example video__
+
 ![](./NMNIST.svg)
 
 ## Citation
