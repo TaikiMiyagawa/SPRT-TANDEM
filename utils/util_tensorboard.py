@@ -14,7 +14,7 @@ class TensorboardLogger():
     def __init__(self, root_tblogs, subproject_name, exp_phase, comment, time_stamp):
         """Create a summary writer logging to root_tblogs + naming rule shown below.
         Args:
-            root_tblogs: A string. e.g., "/data/t-miyagawa/PROJECT_NAME/DATASET_NAME/tblogs".
+            root_tblogs: A string. 
             subproject_name: A string.
             comment: A string.
             time_stamp: A str of a time stamp. e.g., time_stamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S%f")[:-3]
