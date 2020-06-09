@@ -4,7 +4,7 @@ import sys, os
 def run_optuna(root_dblogs, subproject_name, exp_phase, objective, nb_trials):
     """ Load or create study and optimize objective.
     Args:
-        root_dblogs: A str. The root directory for .db files, e.g., "/data/t-miyagawa/PROJECT_NAME/DATASET/dblogs"
+        root_dblogs: A str. The root directory for .db files.
         sugproject_name: A string. Used for study name and storage name.
         exp_phase: A string. Used for study name and storage name.
     """
