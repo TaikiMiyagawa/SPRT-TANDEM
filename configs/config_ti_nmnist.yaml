@@ -19,7 +19,7 @@ duration: 20 # num of frames in a single video
 feat_dim: 128 # feature dimension
 
 # Training config
-gpu: 0 # Whic GPU is used
+gpu: 0 # Which GPU is used
 subproject_name: "1st_order_SPRT"  # used for names of directories and log files
 comment: "_" # used for TensorBoard logs
 nb_trials: 1 # how many trainings (=trials) in one `python train_ti_nmnistlpy` command
@@ -35,21 +35,21 @@ path_resume: "/storage/SPRT-TANDEM/nosaic_mnist/ckptlogs/..."
 flag_seed: False
     # Whether to fix numpy and tensorflow seeds
 seed: 7
-    # is ignored if flag_seed is False
+    # ignored if flag_seed is False
 train_display_step: 20 # Outputs stdout log per this steps
-valid_step: 50 # validation per 
+valid_step: 50 # iteration per validation
 max_to_keep: 3 # latest `max_to_keep` checkpoints will be saved
 
 # Model 
-order_sprt: 0 # Order of the N-th Markovian approximation of the SPRT
+order_sprt: 2 # Order of the N-th Markovian approximation of the SPRT
 learning_rates: [1e-2, 1e-3] # learning rate decay is available
 decay_steps: [100000000000,] # learning rate is decayed at this step
 weight_decay: 0.00001
 name_optimizer: "adam" # adam, rmsprop, sgd, momentum, ... See optimizers.py
 
-param_multiplet_loss: 0. # prefactor of the multiplet loss in the total loss
+param_multiplet_loss: 1. # prefactor of the multiplet loss in the total loss
 param_llr_loss: 1.  # prefactor of the LLLR in the total loss
-dropout: 0. # 0 is no Dropout
+dropout: 0.2 # 0 is no Dropout
 width_lstm: 128 # num of hidden states in the LSTM
 activation: "tanh" # sigmoid, linear, ... Default is "tanh"
 flag_wd: True # Use weight decay or not
