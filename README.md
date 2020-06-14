@@ -90,14 +90,17 @@ __An example video__
 ## Citation
 ___Please cite our paper and this page if you use the whole or a part of our codes.___
 ```
-Bibtex:(to be added soon)
+Bibtex:
 
-@article{XXX
-  XXX
+@misc{ebihara2020deep,
+    title={Deep Neural Networks for the Sequential Probability Ratio Test on Non-i.i.d. Data Series},
+    author={Akinori F. Ebihara and Taiki Miyagawa and Kazuyuki Sakurai and Hitoshi Imaoka},
+    year={2020},
+    eprint={2006.05587},
+    archivePrefix={arXiv},
+    primaryClass={cs.LG}
 }
-@misc{XXX
-  XXX
-}
+
 ```
 
 ## Anonymous Github
