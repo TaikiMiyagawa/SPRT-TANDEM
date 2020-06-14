@@ -92,7 +92,7 @@ ___Please cite our paper and this page if you use the whole or a part of our cod
 ```
 Bibtex:
 
-@misc{ebihara2020deep,
+@misc{SPRT_TANDEM2020,
     title={Deep Neural Networks for the Sequential Probability Ratio Test on Non-i.i.d. Data Series},
     author={Akinori F. Ebihara and Taiki Miyagawa and Kazuyuki Sakurai and Hitoshi Imaoka},
     year={2020},
