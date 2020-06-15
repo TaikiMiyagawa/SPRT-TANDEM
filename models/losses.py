@@ -6,7 +6,7 @@ def multiplet_loss_func(logits_slice, labels_slice):
     """Multiplet loss for density estimation of time-series data.
     Args:
         model: A model.backbones_lstm.LSTMModel object. 
-        logits_slice: An logit Tensor with shape ((effective) batch size, order of SPRT + 1, num classes). This is the output of LSTMModel.call(inputs, training).
+        logits_slice: A logit Tensor with shape ((effective) batch size, order of SPRT + 1, num classes). This is the output of LSTMModel.call(inputs, training).
         labels_slice: A label Tensor with shape ((effective) batch size,)
     Returns:
         mpl: A scalar Tensor. Sum of multiplet losses.
