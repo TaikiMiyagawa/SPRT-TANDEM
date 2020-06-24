@@ -23,10 +23,10 @@ __Result images__
 ## Files and Directories
 - `train_fe_nmnist.py`
   - __training script__ for feature extractor (ResNet) on Nosaic MNIST
-  - Modiry `config_fe.yaml` as you see fit and `python train_fe_nmnist.py` in `/SPRT-TANDEM`.
+  - Modify `config_fe.yaml` as you see fit and `python train_fe_nmnist.py` in `/SPRT-TANDEM`.
 - `train_ti_nmnist.py`
   - __training script__ for temporal integrator (LSTM) on Nosaic MNIST
-  - Modiry `config_ti.yaml` as you see fit and `python train_ti_nmnist.py` in `/SPRT-TANDEM`.
+  - Modify `config_ti.yaml` as you see fit and `python train_ti_nmnist.py` in `/SPRT-TANDEM`.
 
 - `demo_nmnist.ipynb`
   - Nosaic MNIST is like this. Have a look!
