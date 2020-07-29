@@ -24,7 +24,10 @@ subproject_name: "feature_extraction"
 comment: "_"
 nb_trials: 1
 exp_phase: "try"
-
+    # try: trial run, 
+    # tuning: optuning (results will be straged in .db file under `root_dglogs`), 
+    # stat: same as `try` but has access to test data
+    
 flag_resume: False
 path_resume: "/storage/SPRT-TANDEM/nosaic_mnist/ckptlogs/..." 
 flag_seed: False
