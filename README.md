@@ -7,6 +7,7 @@ This repository contains the SPRT-TANDEM model proposed in "Deep Neural Networks
 - CUDA 10.0
 - cuDNN 7.6.0
 - (For reproduction: Jupyter Notebook)
+- Optuna 0.14.0
 
 ## Reproduction and Quick Trial
 1. Make Nosaic MNIST (`make_nmnist.py`): Modify user-defined parameters and `python make_nmnist.py`.
