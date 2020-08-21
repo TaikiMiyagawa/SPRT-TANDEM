@@ -84,7 +84,7 @@ def validation_loop(parsed_image_dataset_valid, model, num_validdata, batch_size
     for iter_idx in range(len(losses_valid)):
         losses_valid[iter_idx] /= cnt
 
-    bac_valid = binary_confmx_to_bac(confmx_valid_tmp)
+    bac_valid = binary_confmx_to_bac(confmx_valid)
     print(confmx_valid)
     print("Balanced Accuracy: {:7.5f}".format(bac_valid))
 
