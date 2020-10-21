@@ -682,7 +682,9 @@ class ResNetModel(tf.keras.Model):
             resnet_version: Integer representing which version of the ResNet network
                 to use. See README for details. Valid values: [1, 2]
             data_format: Input format ('channels_last', 'channels_first', or None).
-                If set to None, the format is dependent on whether a GPU is available.
+                If set to None, the format is dependent on whether a GPU is available
+                (GPU availabel -> convert to channels-first; otherwise not)
+                and the input feature must be channels-last!!
             dtype: The TensorFlow dtype to use for calculations. If not specified
                 tf.float32 is used.
         Raises:
@@ -704,9 +706,11 @@ class ResNetModel(tf.keras.Model):
         if dtype not in ALLOWED_TYPES:
             raise ValueError('dtype must be one of: {}'.format(ALLOWED_TYPES))
 
+        self.forced_channels_first = False
         if not data_format:
             data_format = (
                 'channels_first' if tf.test.is_built_with_cuda() else 'channels_last')
+            self.forced_channels_first = True
 
         # Params
         self.data_format = data_format
@@ -792,7 +796,7 @@ class ResNetModel(tf.keras.Model):
               https://www.tensorflow.org/performance/performance_guide#data_formats
         """
         # Check data format
-        if self.data_format == 'channels_first':
+        if self.forced_channels_first:
             inputs = tf.transpose(inputs, [0, 3, 1, 2])
 
         # 1st stage 
