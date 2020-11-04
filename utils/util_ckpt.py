@@ -31,9 +31,6 @@ def checkpoint_logger(global_step, model, optimizer, flag_resume, root_ckptlogs,
     dir_ckptlogs = "{}/{}_{}/{}_{}".format(
         root_ckptlogs, subproject_name, exp_phase, comment, time_stamp)
 
-    if not os.path.exists(path_resume):
-        os.makedirs(path_resume)
-
     if not(config_path is None):
         dir_configs = dir_ckptlogs + "/configs"
 
