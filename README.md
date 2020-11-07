@@ -89,7 +89,7 @@ __An example video__
 ![](./NMNIST.svg)
 
 ## Citation
-___Please cite our paper and this page if you use the whole or a part of our codes.___
+___Please cite our paper if you use the whole or a part of our codes.___
 ```
 Bibtex:
 
