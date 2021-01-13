@@ -1,5 +1,5 @@
 # SPRT-TANDEM
-This repository contains the SPRT-TANDEM model proposed in "Deep Neural Networks for the Sequential Probability Ratio Test on Non-i.i.d. Data Series" to perform early classification of time-series. The SPRT-TANDEM sequentially estimates log-likelihood ratios of two hypotheses, or classes, for fast and accurate sequential data classification.
+This repository contains the SPRT-TANDEM model proposed in "Sequential Density Ratio Estimation for Simultaneous Optimization of Speed and Accuracy" to perform early classification of time-series. The SPRT-TANDEM sequentially estimates log-likelihood ratios of two hypotheses, or classes, for fast and accurate sequential data classification.
 
 ## Requirements
 - Python 3.5
@@ -13,8 +13,6 @@ This repository contains the SPRT-TANDEM model proposed in "Deep Neural Networks
 1. Make Nosaic MNIST (`make_nmnist.py`): Modify user-defined parameters and `python make_nmnist.py`.
 2. Save bottleneck features of Nosaic MNIST (`save_featureTFR_nmnist.ipynb`): Modify user-defined parameters and run all the cells.
 3. Plot the speed-accuracy tradeoff (SAT) curve (`plot_SAT_curve.ipynb`): Modify user-defined parameters and run all the cells.
-
-(Cannot open the images in Anonymous Github)
 
 __Result images__
 
@@ -80,7 +78,6 @@ __Result images__
   - TensorBoard logger class
 
 ## Nosaic MNIST Example
-(Cannot open the image in Anonymous Github) 
 
 Nosaic (Noise + mOSAIC) MNIST is suitable for early classification of time series. You can generate Nosaic MNIST running `make_nmnist.py`.
 
@@ -91,7 +88,7 @@ __An example video__
 ## Citation
 ___Please cite our paper if you use the whole or a part of our codes.___
 ```
-Bibtex:
+Bibtex (now replacing with ICLR2021 version [https://openreview.net/forum?id=Rhsu5qD36cL]; waiting for deanonymization):
 
 @misc{SPRT_TANDEM2020,
     title={Deep Neural Networks for the Sequential Probability Ratio Test on Non-i.i.d. Data Series},
@@ -103,8 +100,4 @@ Bibtex:
 }
 
 ```
-
-## Anonymous Github
-https://anonymous.4open.science/r/8e802b42-ec6f-4545-b34e-fb320cba4c4d/#home
-
 
