@@ -1,5 +1,5 @@
 # SPRT-TANDEM
-This repository contains the SPRT-TANDEM model proposed in ["Sequential Density Ratio Estimation for Simultaneous Optimization of Speed and Accuracy]"(https://openreview.net/forum?id=Rhsu5qD36cL) [ICLR2021 Spotlight] to perform early classification of time-series. The SPRT-TANDEM sequentially estimates log-likelihood ratios of two hypotheses, or classes, for fast and accurate sequential data classification.
+This repository contains the SPRT-TANDEM model proposed in ["Sequential Density Ratio Estimation for Simultaneous Optimization of Speed and Accuracy"](https://openreview.net/forum?id=Rhsu5qD36cL) [ICLR2021 Spotlight] to perform early classification of time-series. The SPRT-TANDEM sequentially estimates log-likelihood ratios of two hypotheses, or classes, for fast and accurate sequential data classification.
 
 ## Requirements
 - Python 3.5
