@@ -1,5 +1,5 @@
 # SPRT-TANDEM
-This repository contains the SPRT-TANDEM model proposed in "Sequential Density Ratio Estimation for Simultaneous Optimization of Speed and Accuracy" [ICLR2021 Spotlight] to perform early classification of time-series. The SPRT-TANDEM sequentially estimates log-likelihood ratios of two hypotheses, or classes, for fast and accurate sequential data classification.
+This repository contains the SPRT-TANDEM model proposed in "Sequential Density Ratio Estimation for Simultaneous Optimization of Speed and Accuracy" [ICLR2021 Spotlight](https://openreview.net/forum?id=Rhsu5qD36cL) to perform early classification of time-series. The SPRT-TANDEM sequentially estimates log-likelihood ratios of two hypotheses, or classes, for fast and accurate sequential data classification.
 
 ## Requirements
 - Python 3.5
@@ -88,15 +88,15 @@ __An example video__
 ## Citation
 ___Please cite our paper if you use the whole or a part of our codes.___
 ```
-Bibtex (now replacing with ICLR2021 version [https://openreview.net/forum?id=Rhsu5qD36cL]; waiting for deanonymization):
+Bibtex:
 
-@misc{SPRT_TANDEM2020,
-    title={Deep Neural Networks for the Sequential Probability Ratio Test on Non-i.i.d. Data Series},
-    author={Akinori F. Ebihara and Taiki Miyagawa and Kazuyuki Sakurai and Hitoshi Imaoka},
-    year={2020},
-    eprint={2006.05587},
-    archivePrefix={arXiv},
-    primaryClass={cs.LG}
+@inproceedings{
+  ebihara2021sequential,
+  title={Sequential Density Ratio Estimation for Simultaneous Optimization of Speed and Accuracy},
+  author={Akinori F Ebihara and Taiki Miyagawa and Kazuyuki Sakurai and Hitoshi Imaoka},
+  booktitle={International Conference on Learning Representations},
+  year={2021},
+  url={https://openreview.net/forum?id=Rhsu5qD36cL}
 }
 
 ```
