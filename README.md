@@ -85,6 +85,9 @@ __An example video__
 
 ![](./NMNIST.svg)
 
+## ICLR2021 Poster
+![](./ICLR2021_spotlight_poster_Final.png)
+
 ## Citation
 ___Please cite our paper if you use the whole or a part of our codes.___
 ```
